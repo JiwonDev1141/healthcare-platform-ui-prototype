@@ -1,11 +1,11 @@
 
 <template>
   <v-app>
-    <MainHeader 
+    <!-- <MainHeader 
       appIconSrc="/assets/icons/jejuhanyeo_logo.svg"
-      :pages="pages"
       bgColor="blue"
-    />
+      color="white"
+    /> -->
   </v-app>
 </template>
 
