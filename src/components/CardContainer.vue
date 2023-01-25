@@ -1,24 +1,24 @@
 <template>
 
-    <div class="container" name="">
-        <div class="area_1">
+    <v-container class="d-flex container" name="">
+        <v-container class="d-none d-sm-none d-md-flex flex-column area_1">
 
             <h3 class="site_title">{{ siteTitle }}</h3>
             <p class="site_description">{{ siteDescription }}</p>
 
-        </div>
-        <div class="area_2">
+        </v-container>
+        <v-container class="d-flex flex-column area_2 align-md-start">
             
             <img style="width: 50px; height: 50px; position: relative; left: 80%" :src="siteMarkSrc" />
 
             <h4 class="page_title">{{ pageTitle }}</h4>
             <LoginForm :siteColor="siteColor" />
             
-        </div>
+        </v-container>
        
     
       
-    </div>
+    </v-container>
   
 </template>
 <script>
@@ -47,9 +47,15 @@ export default {
     border-radius: 30px;
     border: solid 2px black;
     width: 80vw;
-    height: 60vh;
-    display: flex;
-    
+    height: 70vh;
+    padding: 0;
+    background-color: white;
+}
+
+@media (max-height: 670px) {
+    .container {
+        height: 100vh;
+    }
 }
 
 .site_title {
@@ -64,6 +70,7 @@ export default {
     margin-top: 5%;
     /* margin-left: 1%; */
     font-weight: 600;
+    color: black;
 }
 
 .site_description {
@@ -78,19 +85,17 @@ export default {
     background-color: v-bind(siteColor);
     width: 40%;
     height: 100%;
-    display: flex;
     align-items:flex-start;
     padding: 0 30px 40px 30px;
     border-radius: 30px 0 0 30px;
     justify-content: center;
-    flex-direction: column;
+
 }
 
 .area_2 {
     width: 60%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
+
     padding: 30px 20px 30px 40px;
     align-items: flex-start;
 }

@@ -1,13 +1,13 @@
 <template>
     
     <div style="margin-top: 20px;">
-        <span style="margin-right: 10px; ">계정이 없으신가요?</span>
+        <span style="margin-right: 10px; color: grey;">계정이 없으신가요?</span>
         <span style="color:#F07A54; cursor:pointer;">Sign Up</span>
     </div>
     <form class="loginform" name="">
         <input class="loginform_inputBox" type="email" placeholder="E-mail"/>
         <input class="loginform_inputBox" type="password" placeholder="Password" />
-        <div style="display: flex; margin-bottom: 10px; justify-content: flex-end;">
+        <div style="display: flex; margin-bottom: 5px; justify-content: flex-end;">
             <!-- <input class="loginform_checkBox" type="checkbox" />
             <span>Remember me?</span> -->
             <span style="color:#F07A54; cursor: pointer;">비밀번호를 잊으셨나요?</span>
@@ -47,6 +47,7 @@ export default {
     width: 100%;
     padding: 20px;
     margin: 0px 20px 20px 0px;
+    color: black;
 }
 
 .loginform_checkBox {
