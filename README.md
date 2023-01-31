@@ -6,7 +6,7 @@
 
 - [x] Vue3.js
 - [x] Vite
-- [x] Vuetify
+- [x] BootStrap
 
 ## 기능
 

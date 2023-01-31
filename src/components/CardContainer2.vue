@@ -1,19 +1,19 @@
 <template>
 
     <v-container class="d-flex container" name="">
-        <v-container class="d-none d-sm-none d-md-flex flex-column area_1">
-
-            <h3 class="site_title">{{ siteTitle }}</h3>
-            <p class="site_description">{{ siteDescription }}</p>
-
-        </v-container>
         <v-container class="d-flex flex-column area_2 align-md-start">
             
             <img style="width: 50px; height: 50px; position: relative; left: 80%" :src="siteMarkSrc" />
 
             <h4 class="page_title">{{ pageTitle }}</h4>
-            <LoginForm :siteColor="siteColor" />
+            <SignUpForm :siteColor="siteColor" />
             
+        </v-container>
+        <v-container class="d-none d-sm-none d-md-flex flex-column area_1">
+
+            <h3 class="site_title">{{ siteTitle }}</h3>
+            <p class="site_description">{{ siteDescription }}</p>
+
         </v-container>
        
     
@@ -23,10 +23,11 @@
 </template>
 <script>
 import { RouterLink } from 'vue-router';
-import LoginForm from './LoginForm.vue';
+
+import SignUpForm from './SignUpForm.vue';
 
 export default {
-    name: "CardContainer",
+    name: "CardContainer2",
     props: {
         siteTitle: String,
         siteColor: String,
@@ -35,7 +36,7 @@ export default {
         siteMarkSrc: String,
         isLoginPage: Boolean, // 로그인 페이지일 경우 디자인이 약간 달라짐
     },
-    components: { LoginForm }
+    components: { SignUpForm }
 };
 </script>
 <style scoped>
@@ -83,17 +84,17 @@ export default {
 
 .area_1 {
     background-color: v-bind(siteColor);
-    width: 40%;
+    width: 50%;
     height: 100%;
     align-items:flex-start;
     padding: 0 30px 40px 30px;
-    border-radius: 30px 0 0 30px;
+    border-radius: 0px 30px 30px 0;
     justify-content: center;
 
 }
 
 .area_2 {
-    width: 60%;
+    width: 50%;
     height: 100%;
 
     padding: 30px 20px 30px 40px;
